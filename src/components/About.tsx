@@ -90,9 +90,9 @@ export default function About({ personalInfo }: AboutProps) {
                 Motivasi & Nilai Kerja
               </h4>
               <p className="text-gray-800 dark:text-gray-50 md:text-lg leading-relaxed italic font-medium border-l-4 pl-4 border-blue-500 dark:border-blue-500">
-                "Saya percaya bahwa teknologi harus memudahkan hidup manusia. Setiap baris kode yang saya tulis 
+                &ldquo;Saya percaya bahwa teknologi harus memudahkan hidup manusia. Setiap baris kode yang saya tulis 
                 bertujuan untuk menciptakan solusi yang tidak hanya berfungsi dengan baik, tetapi juga memberikan 
-                pengalaman yang menyenangkan bagi pengguna."
+                pengalaman yang menyenangkan bagi pengguna.&rdquo;
               </p>
             </div>
           </div>

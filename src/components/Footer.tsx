@@ -1,4 +1,5 @@
 import { PersonalInfo } from '@/types';
+import Link from 'next/link';
 
 interface FooterProps {
   personalInfo: PersonalInfo;
@@ -27,9 +28,9 @@ export default function Footer({ personalInfo }: FooterProps) {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/" className="text-gray-400 hover:text-white transition-colors">
                   Beranda
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="/gallery" className="text-gray-400 hover:text-white transition-colors">

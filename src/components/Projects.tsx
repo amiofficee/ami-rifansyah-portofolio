@@ -1,4 +1,5 @@
 import { Project } from '@/types';
+import Image from 'next/image';
 
 interface ProjectsProps {
   projects: Project[];
@@ -23,9 +24,11 @@ export default function Projects({ projects }: ProjectsProps) {
               {/* Project Image */}
               <div className="h-48 bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
                 {project.image ? (
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
+                    width={500}          // wajib: tentukan ukuran agar bisa dioptimalkan
+                    height={300}
                     className="w-full h-full object-cover"
                   />
                 ) : (

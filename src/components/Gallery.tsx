@@ -87,7 +87,7 @@ export default function Gallery({ images }: GalleryProps) {
               Tidak ada gambar
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Tidak ada gambar untuk kategori "{selectedCategory}" saat ini.
+              Tidak ada gambar untuk kategori &quot;{selectedCategory}&quot; saat ini.
             </p>
           </div>
         )}
