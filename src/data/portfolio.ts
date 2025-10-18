@@ -7,7 +7,8 @@ export const personalInfo: PersonalInfo = {
   email: "ami.rifansyah@email.com",
   linkedin: "https://linkedin.com/in/ami-rifansyah",
   github: "https://github.com/ami-rifansyah",
-  cv: "/cv-ami-rifansyah.pdf"
+  cv: "/cv-ami-rifansyah.pdf",
+  image: "/images/profile/ami2.jpeg"
 };
 
 export const techStack: TechStack[] = [

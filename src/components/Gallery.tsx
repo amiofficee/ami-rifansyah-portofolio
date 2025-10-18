@@ -2,6 +2,7 @@
 
 import { GalleryImage } from '@/types';
 import { useState } from 'react';
+import Reveal from '@/components/Reveal';
 
 interface GalleryProps {
   images: GalleryImage[];
@@ -19,35 +20,39 @@ export default function Gallery({ images }: GalleryProps) {
   return (
     <div className="py-20 bg-gray-50 dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-            Gallery
-          </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Kumpulan screenshot dan hasil kerja dari berbagai proyek yang telah saya kerjakan
-          </p>
-        </div>
+        <Reveal>
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+              Gallery
+            </h1>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              Kumpulan screenshot dan hasil kerja dari berbagai proyek yang telah saya kerjakan
+            </p>
+          </div>
+        </Reveal>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-                selectedCategory === category
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+        <Reveal>
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-3 rounded-lg font-medium transition-colors ${
+                  selectedCategory === category
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white text-gray-700 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredImages.map((image) => (
+          {filteredImages.map((image, idx) => (
+            <Reveal key={image.id} delayMs={idx * 90}>
             <div
-              key={image.id}
               className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
               onClick={() => setSelectedImage(image)}
             >
@@ -75,6 +80,7 @@ export default function Gallery({ images }: GalleryProps) {
                 </p>
               </div>
             </div>
+            </Reveal>
           ))}
         </div>
 
@@ -92,11 +98,13 @@ export default function Gallery({ images }: GalleryProps) {
           </div>
         )}
 
-        <div className="text-center mt-12">
-          <p className="text-gray-600 dark:text-gray-300">
-            Menampilkan {filteredImages.length} dari {images.length} gambar
-          </p>
-        </div>
+        <Reveal>
+          <div className="text-center mt-12">
+            <p className="text-gray-600 dark:text-gray-300">
+              Menampilkan {filteredImages.length} dari {images.length} gambar
+            </p>
+          </div>
+        </Reveal>
       </div>
 
       {selectedImage && (

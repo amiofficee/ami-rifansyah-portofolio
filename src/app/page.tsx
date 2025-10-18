@@ -8,6 +8,8 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { personalInfo, techStack, projects, experiences } from '@/data/portfolio';
 import HashScrollHandler from '@/components/HashScrollHandler';
+import ClientsMarquee from '@/components/ClientsMarquee';
+import { clientLogos } from '@/data/clients';
 
 export default function Home() {
   return (
@@ -19,6 +21,7 @@ export default function Home() {
       <TechStack techStack={techStack} />
       <Projects projects={projects} />
       <Experience experiences={experiences} />
+      <ClientsMarquee logos={clientLogos} />
       <Contact personalInfo={personalInfo} />
       <Footer personalInfo={personalInfo} />
     </main>

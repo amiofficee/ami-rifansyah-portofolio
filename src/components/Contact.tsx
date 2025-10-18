@@ -2,6 +2,7 @@
 
 import { PersonalInfo } from '@/types';
 import { useState } from 'react';
+import Reveal from '@/components/Reveal';
 
 interface ContactProps {
   personalInfo: PersonalInfo;
@@ -33,17 +34,20 @@ export default function Contact({ personalInfo }: ContactProps) {
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-            Hubungi Saya
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya!
-          </p>
-        </div>
+        <Reveal>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+              Hubungi Saya
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya!
+            </p>
+          </div>
+        </Reveal>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
+          <Reveal>
           <div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Informasi Kontak
@@ -112,8 +116,10 @@ export default function Contact({ personalInfo }: ContactProps) {
               </p>
             </div>
           </div>
+          </Reveal>
 
           {/* Contact Form */}
+          <Reveal delayMs={100}>
           <div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Kirim Pesan
@@ -192,6 +198,7 @@ export default function Contact({ personalInfo }: ContactProps) {
               </button>
             </form>
           </div>
+          </Reveal>
         </div>
       </div>
     </section>

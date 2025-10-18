@@ -67,3 +67,53 @@ html {
 section[id] {
   scroll-margin-top: 6rem;
 }
+
+/* ===== Reveal Animations ===== */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.reveal-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-fade-up {
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal-fade {
+  transition: opacity 600ms ease;
+}
+
+.reveal-scale {
+  transform-origin: center;
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal-zoom-in.reveal-init {
+  transform: scale(0.96);
+}
+
+.reveal-zoom-in.reveal-in {
+  transform: scale(1);
+}
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.reveal-in .reveal-stagger > *,
+.reveal-stagger.reveal-in > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-in .reveal-stagger > *:nth-child(1), .reveal-stagger.reveal-in > *:nth-child(1) { transition: opacity 500ms ease 50ms, transform 500ms ease 50ms; }
+.reveal-in .reveal-stagger > *:nth-child(2), .reveal-stagger.reveal-in > *:nth-child(2) { transition: opacity 500ms ease 120ms, transform 500ms ease 120ms; }
+.reveal-in .reveal-stagger > *:nth-child(3), .reveal-stagger.reveal-in > *:nth-child(3) { transition: opacity 500ms ease 190ms, transform 500ms ease 190ms; }
+.reveal-in .reveal-stagger > *:nth-child(4), .reveal-stagger.reveal-in > *:nth-child(4) { transition: opacity 500ms ease 260ms, transform 500ms ease 260ms; }
+.reveal-in .reveal-stagger > *:nth-child(5), .reveal-stagger.reveal-in > *:nth-child(5) { transition: opacity 500ms ease 330ms, transform 500ms ease 330ms; }
+.reveal-in .reveal-stagger > *:nth-child(6), .reveal-stagger.reveal-in > *:nth-child(6) { transition: opacity 500ms ease 400ms, transform 500ms ease 400ms; }

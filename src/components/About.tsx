@@ -1,4 +1,5 @@
 import { PersonalInfo } from '@/types';
+import Reveal from '@/components/Reveal';
 
 interface AboutProps {
   personalInfo: PersonalInfo;
@@ -17,17 +18,20 @@ export default function About({ personalInfo }: AboutProps) {
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900 text-[var(--foreground)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-            Tentang Saya
-          </h2>
-          <p className="text-lg max-w-3xl mx-auto leading-8">
-            Saya adalah seorang developer yang passionate dalam menciptakan solusi digital yang inovatif dan user-friendly.
-          </p>
-        </div>
+        <Reveal>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+              Tentang Saya
+            </h2>
+            <p className="text-lg max-w-3xl mx-auto leading-8">
+              Saya adalah seorang developer yang passionate dalam menciptakan solusi digital yang inovatif dan user-friendly.
+            </p>
+          </div>
+        </Reveal>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Bio */}
+          <Reveal>
           <div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Biodata Singkat
@@ -64,8 +68,10 @@ export default function About({ personalInfo }: AboutProps) {
               </div>
             )}
           </div>
+          </Reveal>
 
           {/* Right Column - Skills */}
+          <Reveal className="reveal-stagger">
           <div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Skill Umum
@@ -96,6 +102,7 @@ export default function About({ personalInfo }: AboutProps) {
               </p>
             </div>
           </div>
+          </Reveal>
         </div>
       </div>
     </section>

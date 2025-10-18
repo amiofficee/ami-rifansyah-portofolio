@@ -1,5 +1,6 @@
 import { Project } from '@/types';
 import Image from 'next/image';
+import Reveal from '@/components/Reveal';
 
 interface ProjectsProps {
   projects: Project[];
@@ -9,18 +10,21 @@ export default function Projects({ projects }: ProjectsProps) {
   return (
     <section id="projects" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-            Proyek Saya
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Beberapa proyek yang telah saya kerjakan dengan berbagai teknologi dan tantangan yang menarik
-          </p>
-        </div>
+        <Reveal>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+              Proyek Saya
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Beberapa proyek yang telah saya kerjakan dengan berbagai teknologi dan tantangan yang menarik
+            </p>
+          </div>
+        </Reveal>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div key={project.id} className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          {projects.map((project, idx) => (
+            <Reveal key={project.id} delayMs={idx * 100}>
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               {/* Project Image */}
               <div className="h-48 bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
                 {project.image ? (
@@ -125,24 +129,27 @@ export default function Projects({ projects }: ProjectsProps) {
                 </div>
               </div>
             </div>
+            </Reveal>
           ))}
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <p className="text-gray-600 mb-6">
-            Tertarik dengan proyek-proyek saya? Mari kita diskusikan proyek Anda selanjutnya!
-          </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-          >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            Hubungi Saya
-          </a>
-        </div>
+        <Reveal>
+          <div className="text-center mt-16">
+            <p className="text-gray-600 mb-6">
+              Tertarik dengan proyek-proyek saya? Mari kita diskusikan proyek Anda selanjutnya!
+            </p>
+            <a
+              href="#contact"
+              className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Hubungi Saya
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

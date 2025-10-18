@@ -1,4 +1,5 @@
 import { Experience as ExperienceType } from '@/types';
+import Reveal from '@/components/Reveal';
 
 interface ExperienceProps {
   experiences: ExperienceType[];
@@ -8,14 +9,16 @@ export default function Experience({ experiences }: ExperienceProps) {
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-            Pengalaman Kerja
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Perjalanan karir saya dalam dunia pengembangan software
-          </p>
-        </div>
+        <Reveal>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+              Pengalaman Kerja
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Perjalanan karir saya dalam dunia pengembangan software
+            </p>
+          </div>
+        </Reveal>
 
         <div className="relative">
           {/* Timeline Line */}
@@ -23,7 +26,8 @@ export default function Experience({ experiences }: ExperienceProps) {
 
           <div className="space-y-12">
             {experiences.map((experience, index) => (
-              <div key={experience.id} className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              <Reveal key={experience.id} delayMs={index * 120}>
+              <div className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                 {/* Timeline Dot */}
                 <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white dark:border-gray-900 shadow-lg"></div>
 
@@ -65,37 +69,40 @@ export default function Experience({ experiences }: ExperienceProps) {
                   </div>
                 </div>
               </div>
+              </Reveal>
             ))}
           </div>
         </div>
 
         {/* Summary */}
-        <div className="mt-16 text-center">
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 max-w-4xl mx-auto border border-gray-100 dark:border-gray-700">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-              Ringkasan Karir
-            </h3>
-            <p className="text-gray-600 dark:text-gray-200 leading-relaxed mb-6">
-              Selama perjalanan karir saya, saya telah mengembangkan berbagai aplikasi web dan mobile 
-              dengan teknologi modern. Setiap pengalaman telah memberikan pembelajaran berharga dan 
-              membantu saya menjadi developer yang lebih baik.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">{experiences.length}</div>
-                <div className="text-gray-600 dark:text-gray-300">Perusahaan</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">3+</div>
-                <div className="text-gray-600 dark:text-gray-300">Tahun Pengalaman</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
-                <div className="text-gray-600 dark:text-gray-300">Proyek Selesai</div>
+        <Reveal>
+          <div className="mt-16 text-center">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 max-w-4xl mx-auto border border-gray-100 dark:border-gray-700">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                Ringkasan Karir
+              </h3>
+              <p className="text-gray-600 dark:text-gray-200 leading-relaxed mb-6">
+                Selama perjalanan karir saya, saya telah mengembangkan berbagai aplikasi web dan mobile 
+                dengan teknologi modern. Setiap pengalaman telah memberikan pembelajaran berharga dan 
+                membantu saya menjadi developer yang lebih baik.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">{experiences.length}</div>
+                  <div className="text-gray-600 dark:text-gray-300">Perusahaan</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">3+</div>
+                  <div className="text-gray-600 dark:text-gray-300">Tahun Pengalaman</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
+                  <div className="text-gray-600 dark:text-gray-300">Proyek Selesai</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

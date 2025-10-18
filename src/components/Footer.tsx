@@ -1,5 +1,6 @@
 import { PersonalInfo } from '@/types';
 import Link from 'next/link';
+import Reveal from '@/components/Reveal';
 
 interface FooterProps {
   personalInfo: PersonalInfo;
@@ -11,6 +12,7 @@ export default function Footer({ personalInfo }: FooterProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
+          <Reveal>
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -22,8 +24,10 @@ export default function Footer({ personalInfo }: FooterProps) {
               {personalInfo.title} yang passionate dalam menciptakan solusi digital yang inovatif dan user-friendly.
             </p>
           </div>
+          </Reveal>
 
           {/* Quick Links */}
+          <Reveal>
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -38,9 +42,9 @@ export default function Footer({ personalInfo }: FooterProps) {
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/tentang" className="text-gray-400 hover:text-white transition-colors">
                   Tentang
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#projects" className="text-gray-400 hover:text-white transition-colors">
@@ -54,8 +58,10 @@ export default function Footer({ personalInfo }: FooterProps) {
               </li>
             </ul>
           </div>
+          </Reveal>
 
           {/* Contact Info */}
+          <Reveal>
           <div>
             <h3 className="text-lg font-semibold mb-4">Kontak</h3>
             <div className="space-y-2">
@@ -101,17 +107,20 @@ export default function Footer({ personalInfo }: FooterProps) {
               </div>
             </div>
           </div>
+          </Reveal>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
-          </p>
-          <p className="text-gray-500 text-sm mt-2">
-            Dibuat dengan ❤️ menggunakan Next.js dan Tailwind CSS
-          </p>
-        </div>
+        <Reveal>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p className="text-gray-400">
+              © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
+            </p>
+            <p className="text-gray-500 text-sm mt-2">
+              Dibuat dengan ❤️ menggunakan Next.js dan Tailwind CSS
+            </p>
+          </div>
+        </Reveal>
       </div>
     </footer>
   );
