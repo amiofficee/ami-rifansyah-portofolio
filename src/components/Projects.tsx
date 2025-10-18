@@ -12,12 +12,12 @@ export default function Projects({ projects }: ProjectsProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-              Proyek Saya
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Beberapa proyek yang telah saya kerjakan dengan berbagai teknologi dan tantangan yang menarik
-            </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+            My Projects
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Some projects I have worked on with various technologies and interesting challenges
+          </p>
           </div>
         </Reveal>
 
@@ -79,7 +79,7 @@ export default function Projects({ projects }: ProjectsProps) {
 
                 {/* Features */}
                 <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Fitur Utama:</h4>
+                  <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
                     {project.features.slice(0, 3).map((feature, index) => (
                       <li key={index} className="text-sm text-gray-600 dark:text-gray-300 flex items-center">
@@ -91,7 +91,7 @@ export default function Projects({ projects }: ProjectsProps) {
                     ))}
                     {project.features.length > 3 && (
                       <li className="text-sm text-gray-500">
-                        +{project.features.length - 3} fitur lainnya
+                        +{project.features.length - 3} more features
                       </li>
                     )}
                   </ul>
@@ -137,7 +137,7 @@ export default function Projects({ projects }: ProjectsProps) {
         <Reveal>
           <div className="text-center mt-16">
             <p className="text-gray-600 mb-6">
-              Tertarik dengan proyek-proyek saya? Mari kita diskusikan proyek Anda selanjutnya!
+              Interested in my projects? Let's discuss your next project!
             </p>
             <a
               href="#contact"
@@ -146,7 +146,7 @@ export default function Projects({ projects }: ProjectsProps) {
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              Hubungi Saya
+              Contact Me
             </a>
           </div>
         </Reveal>

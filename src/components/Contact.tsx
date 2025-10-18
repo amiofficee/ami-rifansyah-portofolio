@@ -36,12 +36,12 @@ export default function Contact({ personalInfo }: ContactProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-              Hubungi Saya
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya!
-            </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+            Contact Me
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Interested in collaborating or have questions? Don't hesitate to contact me!
+          </p>
           </div>
         </Reveal>
 
@@ -50,7 +50,7 @@ export default function Contact({ personalInfo }: ContactProps) {
           <Reveal>
           <div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-              Informasi Kontak
+              Contact Information
             </h3>
             
             <div className="space-y-6">
@@ -79,9 +79,9 @@ export default function Contact({ personalInfo }: ContactProps) {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100">LinkedIn</h4>
-                    <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700">
-                      Lihat Profil
-                    </a>
+                  <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700">
+                    View Profile
+                  </a>
                   </div>
                 </div>
               )}
@@ -97,7 +97,7 @@ export default function Contact({ personalInfo }: ContactProps) {
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100">GitHub</h4>
                     <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700">
-                      Lihat Repository
+                      View Repository
                     </a>
                   </div>
                 </div>
@@ -107,12 +107,12 @@ export default function Contact({ personalInfo }: ContactProps) {
             {/* Additional Info */}
             <div className="mt-8 p-6 bg-blue-50 dark:bg-gray-800 rounded-lg border border-blue-100 dark:border-gray-700 ring-1 ring-blue-100 dark:ring-gray-700 shadow-sm">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                Kapan Saya Tersedia?
+                When Am I Available?
               </h4>
               <p className="text-gray-600 dark:text-gray-200 leading-relaxed">
-                Saya selalu terbuka untuk peluang baru, baik itu proyek freelance, 
-                kolaborasi, atau posisi full-time. Jika Anda memiliki ide atau proyek 
-                yang menarik, mari kita diskusikan!
+                I am always open to new opportunities, whether it's freelance projects, 
+                collaboration, or full-time positions. If you have an interesting idea or project, 
+                let's discuss it!
               </p>
             </div>
           </div>
@@ -122,13 +122,13 @@ export default function Contact({ personalInfo }: ContactProps) {
           <Reveal delayMs={100}>
           <div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-              Kirim Pesan
+              Send Message
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Nama Lengkap
+                  Full Name
                 </label>
                 <input
                   type="text"
@@ -138,7 +138,7 @@ export default function Contact({ personalInfo }: ContactProps) {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Masukkan nama lengkap Anda"
+                  placeholder="Enter your full name"
                 />
               </div>
 
@@ -154,13 +154,13 @@ export default function Contact({ personalInfo }: ContactProps) {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Masukkan email Anda"
+                  placeholder="Enter your email"
                 />
               </div>
 
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Subjek
+                  Subject
                 </label>
                 <input
                   type="text"
@@ -170,13 +170,13 @@ export default function Contact({ personalInfo }: ContactProps) {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Subjek pesan Anda"
+                  placeholder="Your message subject"
                 />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Pesan
+                  Message
                 </label>
                 <textarea
                   id="message"
@@ -186,7 +186,7 @@ export default function Contact({ personalInfo }: ContactProps) {
                   required
                   rows={5}
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tulis pesan Anda di sini..."
+                  placeholder="Write your message here..."
                 />
               </div>
 
@@ -194,7 +194,7 @@ export default function Contact({ personalInfo }: ContactProps) {
                 type="submit"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
               >
-                Kirim Pesan
+                Send Message
               </button>
             </form>
           </div>

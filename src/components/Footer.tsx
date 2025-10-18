@@ -21,7 +21,7 @@ export default function Footer({ personalInfo }: FooterProps) {
               <span className="text-xl font-bold">{personalInfo.name}</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              {personalInfo.title} yang passionate dalam menciptakan solusi digital yang inovatif dan user-friendly.
+              {personalInfo.title} who is passionate about creating innovative and user-friendly digital solutions.
             </p>
           </div>
           </Reveal>
@@ -33,7 +33,7 @@ export default function Footer({ personalInfo }: FooterProps) {
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-gray-400 hover:text-white transition-colors">
-                  Beranda
+                  Home
                 </Link>
               </li>
               <li>
@@ -43,17 +43,17 @@ export default function Footer({ personalInfo }: FooterProps) {
               </li>
               <li>
                 <Link href="/tentang" className="text-gray-400 hover:text-white transition-colors">
-                  Tentang
+                  About
                 </Link>
               </li>
               <li>
                 <a href="#projects" className="text-gray-400 hover:text-white transition-colors">
-                  Proyek
+                  Projects
                 </a>
               </li>
               <li>
                 <a href="#contact" className="text-gray-400 hover:text-white transition-colors">
-                  Kontak
+                  Contact
                 </a>
               </li>
             </ul>
@@ -63,7 +63,7 @@ export default function Footer({ personalInfo }: FooterProps) {
           {/* Contact Info */}
           <Reveal>
           <div>
-            <h3 className="text-lg font-semibold mb-4">Kontak</h3>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2">
               <div className="flex items-center">
                 <svg className="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,7 +77,7 @@ export default function Footer({ personalInfo }: FooterProps) {
 
             {/* Social Links */}
             <div className="mt-6">
-              <h4 className="text-sm font-semibold mb-3">Ikuti Saya</h4>
+              <h4 className="text-sm font-semibold mb-3">Follow Me</h4>
               <div className="flex space-x-4">
                 {personalInfo.github && (
                   <a
@@ -117,7 +117,7 @@ export default function Footer({ personalInfo }: FooterProps) {
               © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
             </p>
             <p className="text-gray-500 text-sm mt-2">
-              Dibuat dengan ❤️ menggunakan Next.js dan Tailwind CSS
+              Made with ❤️ using Next.js and Tailwind CSS
             </p>
           </div>
         </Reveal>

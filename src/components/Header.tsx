@@ -36,19 +36,19 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              Beranda
+              Home
             </Link>
             <Link href="/gallery" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
               Gallery
             </Link>
             <Link href="/tentang" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              Tentang
+              About
             </Link>
             <SmoothLink id="projects" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              Proyek
+              Projects
             </SmoothLink>
             <SmoothLink id="contact" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              Kontak
+              Contact
             </SmoothLink>
           </nav>
 
@@ -81,7 +81,7 @@ export default function Header() {
                 className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Beranda
+                Home
               </Link>
               <Link
                 href="/gallery"
@@ -95,21 +95,21 @@ export default function Header() {
                 className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Tentang
+                About
               </Link>
               <SmoothLink
                 id="projects"
                 className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
                 onNavigate={() => setIsMenuOpen(false)}
               >
-                Proyek
+                Projects
               </SmoothLink>
               <SmoothLink
                 id="contact"
                 className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
                 onNavigate={() => setIsMenuOpen(false)}
               >
-                Kontak
+                Contact
               </SmoothLink>
             </div>
           </div>

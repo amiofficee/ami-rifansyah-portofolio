@@ -3,10 +3,10 @@ import { PersonalInfo, TechStack, Project, Experience, GalleryImage } from '@/ty
 export const personalInfo: PersonalInfo = {
   name: "Ami Rifansyah",
   title: "Fullstack Developer",
-  description: "Seorang Fullstack Developer dengan pengalaman di bidang pengembangan web dan aplikasi mobile. Berpengalaman dalam teknologi modern seperti Next.js, React, Node.js, dan berbagai database.",
+  description: "A Fullstack Developer with experience in web and mobile application development. Experienced in modern technologies like Next.js, React, Node.js, and various databases.",
   email: "ami.rifansyah@email.com",
-  linkedin: "https://linkedin.com/in/ami-rifansyah",
-  github: "https://github.com/ami-rifansyah",
+  linkedin: "https://www.linkedin.com/in/ami-rifansyah-1136b9209/",
+  github: "https://github.com/amirifansyah",
   cv: "/cv-ami-rifansyah.pdf",
   image: "/images/profile/ami2.jpeg"
 };
@@ -34,10 +34,10 @@ export const projects: Project[] = [
   {
     id: "1",
     title: "Admin Panel Inventory",
-    description: "Sistem manajemen inventori dengan fitur dashboard, laporan, dan integrasi barcode scanner.",
+    description: "Inventory management system with dashboard, reporting, and barcode scanner integration features.",
     stack: ["Next.js", "Tailwind CSS", "Node.js", "MySQL", "JWT"],
     role: "Fullstack Developer",
-    features: ["Login dengan JWT", "Dark mode", "Dynamic table", "Barcode scanner", "Export PDF"],
+    features: ["JWT Login", "Dark mode", "Dynamic table", "Barcode scanner", "Export PDF"],
     github: "https://github.com/ami-rifansyah/inventory-admin",
     demo: "https://inventory-admin.vercel.app",
     image: "/projects/inventory-admin.png"
@@ -45,7 +45,7 @@ export const projects: Project[] = [
   {
     id: "2",
     title: "Kanban Board App",
-    description: "Aplikasi kanban board untuk manajemen task dan project dengan drag & drop.",
+    description: "Kanban board application for task and project management with drag & drop.",
     stack: ["React", "TypeScript", "Tailwind CSS", "Zustand", "React DnD"],
     role: "Frontend Developer",
     features: ["Drag & drop", "Real-time updates", "Task categories", "User management"],
@@ -56,7 +56,7 @@ export const projects: Project[] = [
   {
     id: "3",
     title: "E-commerce Platform",
-    description: "Platform e-commerce lengkap dengan payment gateway dan admin panel.",
+    description: "Complete e-commerce platform with payment gateway and admin panel.",
     stack: ["Next.js", "Stripe", "MongoDB", "Redux", "Tailwind CSS"],
     role: "Fullstack Developer",
     features: ["Payment integration", "User authentication", "Admin dashboard", "Order management"],
@@ -71,13 +71,13 @@ export const experiences: Experience[] = [
     id: "1",
     company: "OtoAppraisal",
     position: "Fullstack Developer",
-    period: "2023 - Sekarang",
-    description: "Menangani pengembangan fitur appraisal kendaraan, integrasi API Otospector, dan optimalisasi performa proses QC.",
+    period: "2023 - Present",
+    description: "Handling vehicle appraisal feature development, Otospector API integration, and QC process performance optimization.",
     achievements: [
-      "Mengembangkan sistem appraisal kendaraan dengan integrasi API pihak ketiga",
-      "Mengoptimalkan performa aplikasi hingga 40% lebih cepat",
-      "Mengimplementasikan sistem QC yang efisien",
-      "Mentoring junior developer dalam tim"
+      "Developed vehicle appraisal system with third-party API integration",
+      "Optimized application performance by 40% faster",
+      "Implemented efficient QC system",
+      "Mentored junior developers in the team"
     ]
   },
   {
@@ -85,12 +85,12 @@ export const experiences: Experience[] = [
     company: "TechStart Indonesia",
     position: "Frontend Developer",
     period: "2022 - 2023",
-    description: "Berfokus pada pengembangan UI/UX yang responsif dan modern untuk berbagai aplikasi web.",
+    description: "Focused on responsive and modern UI/UX development for various web applications.",
     achievements: [
-      "Mengembangkan 5+ aplikasi web dengan React dan Next.js",
-      "Meningkatkan user experience dengan implementasi design system",
-      "Kolaborasi dengan tim design untuk optimalisasi UI/UX",
-      "Mengoptimalkan performa loading hingga 60%"
+      "Developed 5+ web applications with React and Next.js",
+      "Improved user experience with design system implementation",
+      "Collaborated with design team for UI/UX optimization",
+      "Optimized loading performance by 60%"
     ]
   },
   {
@@ -98,12 +98,12 @@ export const experiences: Experience[] = [
     company: "Digital Solutions Co.",
     position: "Junior Developer",
     period: "2021 - 2022",
-    description: "Belajar dan berkontribusi dalam pengembangan aplikasi web menggunakan teknologi modern.",
+    description: "Learning and contributing to web application development using modern technologies.",
     achievements: [
-      "Mengembangkan fitur-fitur untuk aplikasi internal perusahaan",
-      "Belajar dan mengimplementasikan best practices dalam coding",
-      "Berpartisipasi dalam code review dan pair programming",
-      "Menyelesaikan 10+ bug fixes dan minor features"
+      "Developed features for internal company applications",
+      "Learned and implemented best practices in coding",
+      "Participated in code review and pair programming",
+      "Completed 10+ bug fixes and minor features"
     ]
   }
 ];
@@ -112,42 +112,42 @@ export const galleryImages: GalleryImage[] = [
   {
     id: "1",
     title: "Dashboard Analytics",
-    description: "Dashboard analytics dengan visualisasi data yang interaktif",
+    description: "Analytics dashboard with interactive data visualization",
     imageUrl: "/gallery/dashboard-analytics.jpg",
     category: "Dashboard"
   },
   {
     id: "2",
     title: "Mobile App UI",
-    description: "Interface aplikasi mobile dengan design modern",
+    description: "Mobile application interface with modern design",
     imageUrl: "/gallery/mobile-app-ui.jpg",
     category: "Mobile"
   },
   {
     id: "3",
     title: "E-commerce Homepage",
-    description: "Halaman utama platform e-commerce",
+    description: "E-commerce platform homepage",
     imageUrl: "/gallery/ecommerce-homepage.jpg",
     category: "E-commerce"
   },
   {
     id: "4",
     title: "Admin Panel",
-    description: "Panel admin dengan fitur manajemen yang lengkap",
+    description: "Admin panel with complete management features",
     imageUrl: "/gallery/admin-panel.jpg",
     category: "Admin"
   },
   {
     id: "5",
     title: "Kanban Board",
-    description: "Aplikasi kanban board untuk manajemen project",
+    description: "Kanban board application for project management",
     imageUrl: "/gallery/kanban-board.jpg",
     category: "Project Management"
   },
   {
     id: "6",
     title: "Landing Page",
-    description: "Landing page dengan design yang menarik",
+    description: "Landing page with attractive design",
     imageUrl: "/gallery/landing-page.jpg",
     category: "Landing Page"
   }
