@@ -4,7 +4,7 @@ export const personalInfo: PersonalInfo = {
   name: "Ami Rifansyah",
   title: "Fullstack Developer",
   description: "A Fullstack Developer with experience in web and mobile application development. Experienced in modern technologies like Next.js, React, Node.js, and various databases.",
-  email: "ami.rifansyah@email.com",
+  email: "amirifansyah5@gmail.com",
   linkedin: "https://www.linkedin.com/in/ami-rifansyah-1136b9209/",
   github: "https://github.com/amirifansyah",
   cv: "/cv-ami-rifansyah.pdf",

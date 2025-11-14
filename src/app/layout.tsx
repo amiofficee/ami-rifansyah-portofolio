@@ -69,7 +69,7 @@ export default function RootLayout({
             ],
             "description": "Portfolio Ami Rifansyah, konsultan IT, programmer, dan fullstack developer berpengalaman di Next.js, React, Node.js, mobile development (Android & iOS), serta berbagai teknologi modern.",
             "alumniOf": "TechStart Indonesia, Digital Solutions Co.",
-            "email": "ami.rifansyah@email.com"
+            "email": "amirifansyah5@gmail.com"
           })
         }} />
       </head>

@@ -25,9 +25,12 @@ export default function Contact({ personalInfo }: ContactProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    alert('Pesan Anda telah terkirim! Saya akan segera menghubungi Anda.');
+    const mailtoLink = `mailto:${personalInfo.email}?subject=${encodeURIComponent(
+      formData.subject
+    )}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+    window.location.href = mailtoLink;
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
