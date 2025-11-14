@@ -1,3 +1,4 @@
+import { IconType } from "react-icons";
 export interface PersonalInfo {
   name: string;
   title: string;
@@ -11,7 +12,11 @@ export interface PersonalInfo {
 
 export interface TechStack {
   category: string;
-  technologies: string[];
+  technologies: {
+    name: string;
+    icon: IconType;
+    color: string;
+  }[];
 }
 
 export interface Project {

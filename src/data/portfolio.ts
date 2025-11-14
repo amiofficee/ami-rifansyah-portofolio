@@ -11,99 +11,262 @@ export const personalInfo: PersonalInfo = {
   image: "/images/profile/ami2.jpeg"
 };
 
+import {
+  FaReact,
+  FaNodeJs,
+  FaLaravel,
+  FaPhp,
+  FaGithub,
+  FaDocker,
+  FaAws,
+  FaVuejs,
+} from 'react-icons/fa';
+import {
+  SiNextdotjs,
+  SiNuxtdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiBootstrap,
+  SiExpress,
+  SiMysql,
+  SiMongodb,
+  SiRedis,
+  SiSequelize,
+  SiVercel,
+  SiPostman,
+  SiFirebase,
+  SiBitbucket,
+  SiChakraui,
+} from 'react-icons/si';
+import { GiPolarBear } from 'react-icons/gi';
+
 export const techStack: TechStack[] = [
   {
     category: "Frontend",
-    technologies: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "Redux", "Zustand"]
+    technologies: [
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+      { name: "Nuxt.js", icon: SiNuxtdotjs, color: "#00DC82" },
+      { name: "React.js", icon: FaReact, color: "#61DAFB" },
+      { name: "Vue.js", icon: FaVuejs, color: "#42b883" },
+      { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+      { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
+      { name: "Chakra UI", icon: SiChakraui, color: "#319795" },
+      // { name: "Redux", icon: SiRedux, color: "#764ABC" },
+      { name: "Zustand", icon: GiPolarBear, color: "#FF9900" }
+    ]
   },
   {
     category: "Backend",
-    technologies: ["Node.js", "Express.js", "Laravel", "PHP", "REST API", "GraphQL"]
+    technologies: [
+      { name: "Node.js", icon: FaNodeJs, color: "#339933" },
+      { name: "Express.js", icon: SiExpress, color: "#000000" },
+      { name: "Laravel", icon: FaLaravel, color: "#FF2D20" },
+      { name: "PHP", icon: FaPhp, color: "#777BB4" },
+      { name: "REST API", icon: SiPostman, color: "#FF6C37" },
+      { name: "Firebase", icon: SiFirebase, color: "#FFCA28" }
+      // { name: "GraphQL", icon: SiGraphql, color: "#E10098" }
+    ]
   },
   {
     category: "Database",
-    technologies: ["MySQL", "MongoDB", "PostgreSQL", "Redis", "Prisma", "Sequelize"]
+    technologies: [
+      { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+      // { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+      { name: "Redis", icon: SiRedis, color: "#D82C20" },
+      // { name: "Prisma", icon: SiPrisma, color: "#0C344B" },
+      { name: "Sequelize", icon: SiSequelize, color: "#52B0E7" }
+    ]
   },
   {
     category: "Tools & Others",
-    technologies: ["Git", "Docker", "Vercel", "Postman", "Figma", "Jira", "AWS"]
+    technologies: [
+      // { name: "Git", icon: FaGitAlt, color: "#F05032" },
+      { name: "GitHub", icon: FaGithub, color: "#181717" },
+      { name: "Bitbucket", icon: SiBitbucket, color: "#0052CC" },
+      { name: "Docker", icon: FaDocker, color: "#2496ED" },
+      { name: "Vercel", icon: SiVercel, color: "#000000" },
+      { name: "Postman", icon: SiPostman, color: "#FF6C37" },
+      // { name: "Figma", icon: FaFigma, color: "#F24E1E" },
+      // { name: "Jira", icon: SiJira, color: "#0052CC" },
+      { name: "AWS", icon: FaAws, color: "#FF9900" }
+    ]
   }
 ];
 
 export const projects: Project[] = [
   {
     id: "1",
-    title: "Admin Panel Inventory",
-    description: "Inventory management system with dashboard, reporting, and barcode scanner integration features.",
-    stack: ["Next.js", "Tailwind CSS", "Node.js", "MySQL", "JWT"],
+    title: "E‑Commerce Scraping Extension",
+    description: "Chrome extension for scraping product data from multiple e-commerce platforms such as Tokopedia, Shopee, 1688, and Taobao. The system extracts product information using injected scripts and stores results in Firebase.",
+    stack: ["JavaScript", "nodeJS", "Python", "Firebase", "Chrome Extension", "Inject Script"],
     role: "Fullstack Developer",
-    features: ["JWT Login", "Dark mode", "Dynamic table", "Barcode scanner", "Export PDF"],
-    github: "https://github.com/ami-rifansyah/inventory-admin",
-    demo: "https://inventory-admin.vercel.app",
-    image: "/projects/inventory-admin.png"
+    features: [
+      "Login with Firebase Authentication",
+      "Scraping product details from Tokopedia, Shopee, 1688, Taobao",
+      "Injected script for DOM extraction",
+      "Automatic product categorization",
+      "Store and sync data via Firebase Firestore",
+      "Multi-language support",
+      "Export data to CSV/JSON"
+    ],
+    // github: "https://github.com/ami-rifansyah/chrome-scraper-extension",
+    // demo: "https://chrome.google.com/webstore/...",
+    image: "/images/project/extention-chrome.png"
   },
   {
     id: "2",
-    title: "Kanban Board App",
-    description: "Kanban board application for task and project management with drag & drop.",
-    stack: ["React", "TypeScript", "Tailwind CSS", "Zustand", "React DnD"],
+    title: "E‑Commerce Import Platform",
+    description: "Web platform to assist importing products from China, Thailand, Korea, USA, and Japan. The system helps users search, manage, and track imported goods efficiently with real-time updates and task management features.",
+    stack: ["JavaScript", "React.js", "Chakra UI", "Firebase", "React DnD"],
     role: "Frontend Developer",
-    features: ["Drag & drop", "Real-time updates", "Task categories", "User management"],
-    github: "https://github.com/ami-rifansyah/kanban-board",
-    demo: "https://kanban-board.vercel.app",
-    image: "/projects/kanban-board.png"
+    features: [
+      "Drag & drop interface for managing imported items",
+      "Real-time updates with Firebase",
+      "Task and order categorization",
+      "User authentication and management via Firebase",
+      "Multi-country product tracking and filtering",
+      "Responsive and user-friendly interface"
+    ],
+    // github: "https://github.com/ami-rifansyah/ecommerce-import-platform",
+    // demo: "https://kanban-board.vercel.app",
+    image: "/images/project/forwarder.png"
   },
   {
     id: "3",
-    title: "E-commerce Platform",
-    description: "Complete e-commerce platform with payment gateway and admin panel.",
-    stack: ["Next.js", "Stripe", "MongoDB", "Redux", "Tailwind CSS"],
+    title: "E‑Commerce Admin Platform",
+    description: "Admin panel for managing customer purchases, tracking shipments from abroad to Indonesia, and facilitating communication between admins. System handles automatic notifications via email, WhatsApp, or SMS, and integrates payment gateways like Xendit and Midtrans. The platform includes a Kanban view for easy task visualization and efficient workflow management.",
+    stack: [
+      "Vue.js",
+      "React.js",
+      "Nuxt.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Chakra UI",
+      "Bootstrap",
+      "Firebase",
+      "Redux",
+      "Laravel",
+      "MySQL",
+      "MongoDB"
+    ],
     role: "Fullstack Developer",
-    features: ["Payment integration", "User authentication", "Admin dashboard", "Order management"],
-    github: "https://github.com/ami-rifansyah/ecommerce-platform",
-    demo: "https://ecommerce-platform.vercel.app",
-    image: "/projects/ecommerce.png"
+    features: [
+      "Payment integration with Xendit and Midtrans",
+      "User authentication and role-based access",
+      "Admin dashboard for managing shipments and orders",
+      "Kanban board for tracking tasks and shipment progress",
+      "Internal chat between admin users",
+      "Automatic notifications to users via email, WhatsApp, and SMS",
+      "Dynamic order and inventory management",
+      "Multi-stack frontend and backend support for scalable architecture"
+    ],
+    // github: "https://github.com/ami-rifansyah/ecommerce-admin-platform",
+    // demo: "https://ecommerce-admin-platform.vercel.app",
+    image: "/images/project/forwarder-admin.png"
   }
 ];
 
 export const experiences: Experience[] = [
   {
     id: "1",
-    company: "OtoAppraisal",
-    position: "Fullstack Developer",
-    period: "2023 - Present",
-    description: "Handling vehicle appraisal feature development, Otospector API integration, and QC process performance optimization.",
+    company: "IMPORTIR.COM",
+    position: "Full Stack Engineer",
+    period: "September 2020 - June 2021",
+    description: "Bug fixing, creating new features for application, internal RBAC implementation, and RESTful API development.",
     achievements: [
-      "Developed vehicle appraisal system with third-party API integration",
-      "Optimized application performance by 40% faster",
-      "Implemented efficient QC system",
-      "Mentored junior developers in the team"
+      "Fixed bugs and optimized existing features",
+      "Created new application features",
+      "Implemented internal RBAC system",
+      "Developed RESTful APIs"
     ]
   },
   {
     id: "2",
-    company: "TechStart Indonesia",
-    position: "Frontend Developer",
-    period: "2022 - 2023",
-    description: "Focused on responsive and modern UI/UX development for various web applications.",
+    company: "IMPORTIR.COM",
+    position: "Middle Full Stack Engineer",
+    period: "July 2021 - May 2022",
+    description: "Rebuilding and optimizing queries, maintaining mobile apps (iOS & Android), managing budgets and accounting features.",
     achievements: [
-      "Developed 5+ web applications with React and Next.js",
-      "Improved user experience with design system implementation",
-      "Collaborated with design team for UI/UX optimization",
-      "Optimized loading performance by 60%"
+      "Rebuilt and optimized queries for the platform",
+      "Maintained mobile apps (iOS & Android)",
+      "Maintained budgeting and accounting modules"
     ]
   },
   {
     id: "3",
-    company: "Digital Solutions Co.",
-    position: "Junior Developer",
-    period: "2021 - 2022",
-    description: "Learning and contributing to web application development using modern technologies.",
+    company: "Deoapp.com",
+    position: "Senior Full Stack Developer",
+    period: "May 2022 - December 2023",
+    description: "Bug fixing, creating new features, internal RBAC implementation, RESTful API development, scraping, and deploying new projects to production servers.",
     achievements: [
-      "Developed features for internal company applications",
-      "Learned and implemented best practices in coding",
-      "Participated in code review and pair programming",
-      "Completed 10+ bug fixes and minor features"
+      "Fixed bugs and improved application stability",
+      "Developed new application features",
+      "Implemented internal RBAC system",
+      "Created RESTful APIs",
+      "Performed data scraping",
+      "Deployed new projects to production"
+    ]
+  },
+  {
+    id: "4",
+    company: "Forwarder.co.id",
+    position: "Tech Lead Full Stack Developer",
+    period: "December 2023 - September 2024",
+    description: "Leading team, developing new features, internal RBAC, RESTful API, scraping, Chrome extension deployment, and payment integration with Xendit & Midtrans.",
+    achievements: [
+      "Fixed bugs and maintained system stability",
+      "Developed new application features",
+      "Implemented internal RBAC and RESTful APIs",
+      "Scraping data for application needs",
+      "Deployed Chrome extension to Chrome Web Store",
+      "Integrated payment with Xendit and Midtrans",
+      "Delegated tasks and managed the development team"
+    ]
+  },
+  {
+    id: "5",
+    company: "Kelas Tambahan",
+    position: "Lead Developer",
+    period: "January 2023 - October 2024",
+    description: "Discussing features with Product Owner, creating web applications including company profiles and educational platforms, bug fixes, and project deployment.",
+    achievements: [
+      "Collaborated with Product Owner to design new features",
+      "Developed Web Sumber Karya Teknik",
+      "Created company profile web applications",
+      "Fixed bugs and optimized existing systems",
+      "Developed web applications for Tofico"
+    ]
+  },
+  {
+    id: "6",
+    company: "Mitra Unggul Solusi",
+    position: "Full Stack Developer – Zuno",
+    period: "October 2024 - September 2025",
+    description: "Led development for Zuno platform, delivering scalable features while ensuring high code quality, maintainability, and best practices.",
+    achievements: [
+      "Designed and implemented new features for Zuno platform",
+      "Optimized system architecture for performance and scalability",
+      "Established coding standards and ensured consistent code quality",
+      "Mentored junior developers and conducted code reviews",
+      "Collaborated with Product Owner and stakeholders for feature planning",
+      "Integrated APIs and third-party services to extend platform capabilities"
+    ]
+  },
+  {
+    id: "7",
+    company: "Grosir Mobil",
+    position: "Full Stack Developer",
+    period: "October 2025 - Present",
+    description: "Developed and maintained web platform for automotive wholesale, providing guidance on technology stack and coding best practices.",
+    achievements: [
+      "Advised team on optimal technology stack choices (frontend, backend, database)",
+      "Implemented clean code principles and coding standards across the project",
+      "Reviewed and refactored existing code to improve readability and maintainability",
+      "Created new features for automotive inventory management and analytics",
+      "Optimized platform performance and ensured scalable architecture",
+      "Mentored junior developers and conducted code reviews"
     ]
   }
 ];

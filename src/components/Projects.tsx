@@ -98,7 +98,7 @@ export default function Projects({ projects }: ProjectsProps) {
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-3">
+                {/* <div className="flex gap-3">
                   {project.github && (
                     <a
                       href={project.github}
@@ -126,7 +126,7 @@ export default function Projects({ projects }: ProjectsProps) {
                       Demo
                     </a>
                   )}
-                </div>
+                </div> */}
               </div>
             </div>
             </Reveal>
@@ -137,7 +137,7 @@ export default function Projects({ projects }: ProjectsProps) {
         <Reveal>
           <div className="text-center mt-16">
             <p className="text-gray-600 mb-6">
-              Interested in my projects? Let's discuss your next project!
+              Interested in my projects? Let&apos;s discuss your next project!
             </p>
             <a
               href="#contact"

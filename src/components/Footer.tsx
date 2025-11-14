@@ -116,9 +116,9 @@ export default function Footer({ personalInfo }: FooterProps) {
             <p className="text-gray-400">
               © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
             </p>
-            <p className="text-gray-500 text-sm mt-2">
+            {/* <p className="text-gray-500 text-sm mt-2">
               Made with ❤️ using Next.js and Tailwind CSS
-            </p>
+            </p> */}
           </div>
         </Reveal>
       </div>
