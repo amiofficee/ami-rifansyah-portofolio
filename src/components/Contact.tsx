@@ -40,7 +40,7 @@ export default function Contact({ personalInfo }: ContactProps) {
             Contact Me
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Interested in collaborating or have questions? Don't hesitate to contact me!
+            Interested in collaborating or have questions? Don&apos;t hesitate to contact me!
           </p>
           </div>
         </Reveal>
@@ -110,9 +110,9 @@ export default function Contact({ personalInfo }: ContactProps) {
                 When Am I Available?
               </h4>
               <p className="text-gray-600 dark:text-gray-200 leading-relaxed">
-                I am always open to new opportunities, whether it's freelance projects, 
+                I am always open to new opportunities, whether it&apos;s freelance projects, 
                 collaboration, or full-time positions. If you have an interesting idea or project, 
-                let's discuss it!
+                let&apos;s discuss it!
               </p>
             </div>
           </div>
