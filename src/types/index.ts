@@ -47,3 +47,23 @@ export interface GalleryImage {
   imageUrl: string;
   category: string;
 } 
+
+export interface ServiceItem {
+  id: string;
+  title: string;
+  description: string;
+  icon: IconType;
+  category: "Business Solutions" | "Custom Development" | "Automation Tools" | "Consulting";
+}
+
+export interface PersonalInfo {
+  name: string;
+  title: string;
+  description: string;
+  email: string;
+  linkedin?: string;
+  github?: string;
+  instagram?: string;
+  cv?: string;
+  image?: string;
+}

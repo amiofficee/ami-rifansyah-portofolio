@@ -92,7 +92,7 @@ export default function Experience({ experiences }: ExperienceProps) {
                   <div className="text-gray-600 dark:text-gray-300">Companies</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">5+</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">6+</div>
                   <div className="text-gray-600 dark:text-gray-300">Years Experience</div>
                 </div>
                 <div className="text-center">

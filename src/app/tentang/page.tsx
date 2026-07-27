@@ -13,23 +13,27 @@ export default function TentangPage() {
   const sideJobs: SideJobItem[] = [
     {
       id: 'sj-1',
-      company: 'UMKM Kopi Nusantara',
-      role: 'Frontend Engineer (Freelance)',
-      description: 'Membangun landing page promosi dan dashboard pemesanan sederhana untuk membantu ekspansi penjualan ke kanal digital.',
-      image: '/images/profile/ami.jpeg'
+      company: 'Sapuhi',
+      role: 'Full Stack Developer (Handover Project)',
+      description: 'Took over website maintenance from the previous developer (Laravel), resolving existing bugs and making code adjustments to keep the site stable and running.',
     },
     {
       id: 'sj-2',
-      company: 'Distribusi Sejahtera',
-      role: 'Fullstack Developer (Side Project)',
-      description: 'Membuat aplikasi internal untuk katalog produk dan pencatatan pemesanan antar-cabang sehingga alur operasional lebih efisien.',
-      image: '/images/profile/ami2.jpeg'
+      company: 'Mitra Unggul Solusi — Zuno',
+      role: 'Full Stack Developer (Freelance)',
+      description: 'Designed and implemented new features for the Zuno platform, optimized system architecture for performance and scalability, established coding standards, and mentored junior developers through code reviews.',
     },
     {
       id: 'sj-3',
-      company: 'HealthCare Local',
-      role: 'Frontend Engineer (Support)',
-      description: 'Membantu tim membuat prototipe appointment online dan edukasi layanan untuk memperluas jangkauan pasien.',
+      company: 'Kelas Tambahan',
+      role: 'Lead Developer (Freelance)',
+      description: 'Collaborated with the Product Owner to design and build company profile websites — including for Sumber Karya Teknik and Tofico — plus an educational platform.',
+    },
+    {
+      id: 'sj-4',
+      company: 'PT. Ikaka Tri Manunggal & Indojaya Soes',
+      role: 'Freelance Web Developer',
+      description: 'Built company profile websites with Next.js, deployed to Vercel and hPanel, including a custom-built email sending tool to help reduce client operational costs.',
     }
   ];
 	return (

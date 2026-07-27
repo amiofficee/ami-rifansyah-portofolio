@@ -1,12 +1,23 @@
-import { PersonalInfo, TechStack, Project, Experience, GalleryImage } from '@/types';
+import {
+  HiOutlineBuildingStorefront,
+  HiOutlineComputerDesktop,
+  HiOutlineCog6Tooth,
+  HiOutlineChatBubbleLeftRight,
+  HiOutlineServerStack,
+  HiOutlineShieldCheck,
+  HiOutlineBolt,
+} from 'react-icons/hi2';
+import { PersonalInfo, TechStack, Project, Experience, GalleryImage, ServiceItem } from '@/types';
+
 
 export const personalInfo: PersonalInfo = {
   name: "Ami Rifansyah",
-  title: "Fullstack Developer",
-  description: "A Fullstack Developer with experience in web and mobile application development. Experienced in modern technologies like Next.js, React, Node.js, and various databases.",
+  title: "Fullstack Developer & IT Consultant",
+  description: "Building scalable web & mobile applications for over 6 years — from e-commerce and real-time bidding platforms to automation tools like web scrapers, Chrome extensions, and self-managed development server infrastructure. Focused on solutions that are fast, efficient, and easy to maintain.",
   email: "amirifansyah5@gmail.com",
   linkedin: "https://www.linkedin.com/in/ami-rifansyah-1136b9209/",
   github: "https://github.com/amirifansyah",
+  instagram: "https://www.instagram.com/ami_rifansyah/",
   cv: "/cv-ami-rifansyah.pdf",
   image: "/images/profile/ami2.jpeg"
 };
@@ -30,6 +41,7 @@ import {
   SiExpress,
   SiMysql,
   SiMongodb,
+  SiPostgresql,
   SiRedis,
   SiSequelize,
   SiVercel,
@@ -37,6 +49,7 @@ import {
   SiFirebase,
   SiBitbucket,
   SiChakraui,
+  SiKubernetes,
 } from 'react-icons/si';
 import { GiPolarBear } from 'react-icons/gi';
 
@@ -73,10 +86,20 @@ export const techStack: TechStack[] = [
     technologies: [
       { name: "MySQL", icon: SiMysql, color: "#4479A1" },
       { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-      // { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+      { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
       { name: "Redis", icon: SiRedis, color: "#D82C20" },
       // { name: "Prisma", icon: SiPrisma, color: "#0C344B" },
       { name: "Sequelize", icon: SiSequelize, color: "#52B0E7" }
+    ]
+  },
+  {
+    category: "Infrastructure & DevOps",
+    technologies: [
+      { name: "Docker", icon: FaDocker, color: "#2496ED" },
+      { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5" },
+      { name: "Server Administration", icon: HiOutlineServerStack, color: "#0EA5E9" },
+      { name: "WireGuard / OpenVPN", icon: HiOutlineShieldCheck, color: "#10B981" },
+      { name: "Pusher (Real-time)", icon: HiOutlineBolt, color: "#F59E0B" }
     ]
   },
   {
@@ -227,46 +250,16 @@ export const experiences: Experience[] = [
   },
   {
     id: "5",
-    company: "Kelas Tambahan",
-    position: "Lead Developer",
-    period: "January 2023 - October 2024",
-    description: "Discussing features with Product Owner, creating web applications including company profiles and educational platforms, bug fixes, and project deployment.",
-    achievements: [
-      "Collaborated with Product Owner to design new features",
-      "Developed Web Sumber Karya Teknik",
-      "Created company profile web applications",
-      "Fixed bugs and optimized existing systems",
-      "Developed web applications for Tofico"
-    ]
-  },
-  {
-    id: "6",
-    company: "Mitra Unggul Solusi",
-    position: "Full Stack Developer – Zuno",
-    period: "October 2024 - September 2025",
-    description: "Led development for Zuno platform, delivering scalable features while ensuring high code quality, maintainability, and best practices.",
-    achievements: [
-      "Designed and implemented new features for Zuno platform",
-      "Optimized system architecture for performance and scalability",
-      "Established coding standards and ensured consistent code quality",
-      "Mentored junior developers and conducted code reviews",
-      "Collaborated with Product Owner and stakeholders for feature planning",
-      "Integrated APIs and third-party services to extend platform capabilities"
-    ]
-  },
-  {
-    id: "7",
-    company: "Grosir Mobil",
+    company: "PT. Solusi Integrasi Pratama",
     position: "Full Stack Developer",
-    period: "October 2025 - Present",
-    description: "Developed and maintained web platform for automotive wholesale, providing guidance on technology stack and coding best practices.",
+    period: "2024 - Present",
+    description: "Building and maintaining multiple platforms for the company — from a real-time vehicle auction system to a B2B e-commerce platform — while also owning the team's development server infrastructure.",
     achievements: [
-      "Advised team on optimal technology stack choices (frontend, backend, database)",
-      "Implemented clean code principles and coding standards across the project",
-      "Reviewed and refactored existing code to improve readability and maintainability",
-      "Created new features for automotive inventory management and analytics",
-      "Optimized platform performance and ensured scalable architecture",
-      "Mentored junior developers and conducted code reviews"
+      "Designed a mobile app prototype (JavaScript/Expo) with a real-time bidding system for vehicle & motorcycle auctions (grosirmobil.id), later extended to web using Nuxt.js, Laravel, and Pusher for real-time sync",
+      "Built skemart.co.id, a B2B e-commerce platform for the company's own large-scale cooperative, using Laravel, Nuxt.js, MySQL, and MongoDB",
+      "Took ownership of dev, staging, and sandbox server infrastructure since early 2026, reducing operational costs and streamlining the team's testing workflow",
+      "Migrated the team's development workflow to remote server-based coding via WireGuard/OpenVPN, removing dependency on individual developer laptops",
+      "Containerized all web applications with Docker, standardizing environments across the development team"
     ]
   }
 ];
@@ -315,3 +308,34 @@ export const galleryImages: GalleryImage[] = [
     category: "Landing Page"
   }
 ]; 
+
+export const services: ServiceItem[] = [
+  {
+    id: "1",
+    title: "Company Profile & E-Commerce",
+    description: "Building responsive, fast, and easy-to-manage company profile websites and e-commerce platforms. from business landing pages to retail and inventory management systems.",
+    icon: HiOutlineBuildingStorefront,
+    category: "Business Solutions"
+  },
+  {
+    id: "2",
+    title: "CMS & Admin Dashboard",
+    description: "Custom CMS, admin panel, and management dashboard development tailored to your business operations. complete with role-based access and reporting.",
+    icon: HiOutlineComputerDesktop,
+    category: "Custom Development"
+  },
+  {
+    id: "3",
+    title: "Web Scraper & Chrome Extension",
+    description: "Automation tools to boost work efficiency, from multi-platform web scrapers to custom Chrome extensions for data research and repetitive task automation.",
+    icon: HiOutlineCog6Tooth,
+    category: "Automation Tools"
+  },
+  {
+    id: "4",
+    title: "IT Consulting",
+    description: "Guidance on tech stack selection, system architecture, and technical strategy to help your business make the right technology decisions from the start.",
+    icon: HiOutlineChatBubbleLeftRight,
+    category: "Consulting"
+  }
+];
