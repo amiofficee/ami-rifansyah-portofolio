@@ -1,12 +1,14 @@
+import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import About from '@/components/About';
 import Footer from '@/components/Footer';
 import { personalInfo } from '@/data/portfolio';
 import SideJobs, { SideJobItem } from '@/components/SideJobs';
 
-export const metadata = {
-	title: 'Tentang - Ami Rifansyah',
-	description: 'Tentang Ami Rifansyah, Fullstack Developer.'
+export const metadata: Metadata = {
+	title: 'Tentang',
+	description: 'Tentang Ami Rifansyah, fullstack developer dan konsultan IT dengan pengalaman 6+ tahun membangun aplikasi web dan mobile.',
+	alternates: { canonical: '/tentang' }
 };
 
 export default function TentangPage() {

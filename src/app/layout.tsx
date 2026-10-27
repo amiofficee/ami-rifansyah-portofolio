@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import ThemeToggle from "@/components/ThemeToggle";
 import ThemeScript from "@/components/ThemeScript";
+import { personalInfo } from "@/data/portfolio";
+import { siteUrl, siteName, siteDescription } from "@/data/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,35 +17,45 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: personalInfo.name,
+  jobTitle: personalInfo.title,
+  url: siteUrl,
+  image: `${siteUrl}${personalInfo.image}`,
+  email: `mailto:${personalInfo.email}`,
+  sameAs: [personalInfo.linkedin, personalInfo.github, personalInfo.instagram],
+  description: siteDescription,
+  knowsAbout: ["Next.js", "React", "Node.js", "Laravel", "TypeScript", "Mobile Development"],
+};
+
 export const metadata: Metadata = {
-  title: "Ami Rifansyah - Konsultan IT, Fullstack Developer, Programmer IT, Mobile Developer, Android & iOS Programmer",
-  description: "Portfolio Ami Rifansyah, konsultan IT, programmer, dan fullstack developer berpengalaman di Next.js, React, Node.js, mobile development (Android & iOS), serta berbagai teknologi modern. Tersedia untuk proyek freelance, konsultasi, dan pengembangan aplikasi.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Ami Rifansyah - Fullstack Developer & IT Consultant",
+    template: "%s | Ami Rifansyah",
+  },
+  description: siteDescription,
   keywords: [
-    "Ami Rifansyah", "ami", "konsultan IT", "ahli IT", "programmer IT", "Fullstack Developer", "Mobile Developer", "Android Programmer", "iOS Programmer", "Next.js", "React", "Node.js", "Portfolio", "Web Development", "IT Consultant", "Software Engineer", "Developer Indonesia", "Jasa IT", "Jasa Pembuatan Website", "Jasa Pembuatan Aplikasi", "Freelance IT", "Pengembang Aplikasi", "Portofolio IT", "Portofolio Programmer"
+    "Ami Rifansyah", "konsultan IT", "programmer IT", "Fullstack Developer", "Mobile Developer", "Android Programmer", "iOS Programmer", "Next.js", "React", "Node.js", "Laravel", "Web Development", "IT Consultant", "Software Engineer", "Developer Indonesia", "Jasa Pembuatan Website", "Jasa Pembuatan Aplikasi", "Freelance IT", "Portofolio Programmer"
   ],
-  authors: [{ name: "Ami Rifansyah" }],
-  creator: "Ami Rifansyah",
+  authors: [{ name: siteName, url: siteUrl }],
+  creator: siteName,
+  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Ami Rifansyah - Konsultan IT, Fullstack Developer, Programmer IT, Mobile Developer, Android & iOS Programmer",
-    description: "Portfolio Ami Rifansyah, konsultan IT, programmer, dan fullstack developer berpengalaman di Next.js, React, Node.js, mobile development (Android & iOS), serta berbagai teknologi modern.",
+    title: "Ami Rifansyah - Fullstack Developer & IT Consultant",
+    description: siteDescription,
     type: "website",
-    url: "https://ami-rifansyah.com", // Ganti dengan domain Anda jika sudah ada
-    images: [
-      {
-        url: "/public/file.svg", // Ganti dengan gambar profil/logo jika ada
-        width: 1200,
-        height: 630,
-        alt: "Ami Rifansyah - Konsultan IT & Fullstack Developer"
-      }
-    ]
+    url: "/",
+    siteName,
+    locale: "id_ID",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ami Rifansyah - Konsultan IT, Fullstack Developer, Programmer IT, Mobile Developer, Android & iOS Programmer",
-    description: "Portfolio Ami Rifansyah, konsultan IT, programmer, dan fullstack developer berpengalaman di Next.js, React, Node.js, mobile development (Android & iOS), serta berbagai teknologi modern.",
-    creator: "@ami_rifansyah", // Ganti jika punya akun Twitter
-    images: ["/public/file.svg"] // Ganti dengan gambar profil/logo jika ada
+    title: "Ami Rifansyah - Fullstack Developer & IT Consultant",
+    description: siteDescription,
   },
 };
 
@@ -55,23 +67,7 @@ export default function RootLayout({
   return (
     <html lang="id" suppressHydrationWarning>
       <head>
-        {/* Struktur data JSON-LD untuk personal portfolio */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Ami Rifansyah",
-            "jobTitle": "Konsultan IT, Fullstack Developer, Mobile Developer",
-            "url": "https://ami-rifansyah.com", // Ganti dengan domain Anda jika sudah ada
-            "sameAs": [
-              "https://linkedin.com/in/ami-rifansyah",
-              "https://github.com/ami-rifansyah"
-            ],
-            "description": "Portfolio Ami Rifansyah, konsultan IT, programmer, dan fullstack developer berpengalaman di Next.js, React, Node.js, mobile development (Android & iOS), serta berbagai teknologi modern.",
-            "alumniOf": "TechStart Indonesia, Digital Solutions Co.",
-            "email": "amirifansyah5@gmail.com"
-          })
-        }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[var(--background)] text-[var(--foreground)] transition-colors`}>
         <ThemeScript />
