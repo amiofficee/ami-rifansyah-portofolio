@@ -191,6 +191,28 @@ export const projects: Project[] = [
   }
 ];
 
+export const personalProjects: Project[] = [
+  {
+    id: "p1",
+    title: "BPaaa – Payday Budget Planner",
+    description: "Personal finance web app for Indonesian users that plans budgets per payday period instead of calendar month. Users split their salary into spending categories with allocation presets (50/30/20, Hemat, Agresif Menabung, or custom) and track what's left in each pay period.",
+    stack: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "NextAuth", "TanStack Query", "Zustand", "Vercel"],
+    role: "Fullstack Developer",
+    features: [
+      "Custom payday-based period reset date",
+      "Automatic allocation presets (50/30/20, Hemat, Agresif Menabung, custom)",
+      "Recurring transactions and nested categories",
+      "Budgets and savings goals",
+      "Multiple payment methods (cash, transfer, QRIS, e-wallet)",
+      "Authentication with NextAuth and email notifications",
+      "Installable PWA with dark mode",
+      "Tiered subscription plans (Free, Medium, Full, Custom)"
+    ],
+    demo: "https://finance-app-green-chi.vercel.app/",
+    image: "/images/project/finance-app.png"
+  }
+];
+
 export const experiences: Experience[] = [
   {
     id: "1",

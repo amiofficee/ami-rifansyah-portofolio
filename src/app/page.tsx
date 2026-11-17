@@ -7,7 +7,7 @@ import Projects from '@/components/Projects';
 import Experience from '@/components/Experience';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import { personalInfo, techStack, projects, experiences, services } from '@/data/portfolio';
+import { personalInfo, techStack, projects, personalProjects, experiences, services } from '@/data/portfolio';
 import HashScrollHandler from '@/components/HashScrollHandler';
 import ClientsMarquee from '@/components/ClientsMarquee';
 import { clientLogos } from '@/data/clients';
@@ -22,6 +22,13 @@ export default function Home() {
       <Services services={services} />
       <TechStack techStack={techStack} />
       <Projects projects={projects} />
+      <Projects
+        id="personal-projects"
+        title="Personal Projects"
+        description="Products I built and own myself, from idea to deployment"
+        className="bg-gray-50 dark:bg-gray-950"
+        projects={personalProjects}
+      />
       <Experience experiences={experiences} />
       <ClientsMarquee logos={clientLogos} />
       <Contact personalInfo={personalInfo} />

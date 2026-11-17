@@ -4,19 +4,29 @@ import Reveal from '@/components/Reveal';
 
 interface ProjectsProps {
   projects: Project[];
+  id?: string;
+  title?: string;
+  description?: string;
+  className?: string;
 }
 
-export default function Projects({ projects }: ProjectsProps) {
+export default function Projects({
+  projects,
+  id = 'projects',
+  title = 'My Projects',
+  description = 'Some projects I have worked on with various technologies and interesting challenges',
+  className = 'bg-white dark:bg-gray-900',
+}: ProjectsProps) {
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900">
+    <section id={id} className={`py-20 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-            My Projects
+            {title}
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Some projects I have worked on with various technologies and interesting challenges
+            {description}
           </p>
           </div>
         </Reveal>
@@ -98,7 +108,7 @@ export default function Projects({ projects }: ProjectsProps) {
                 </div>
 
                 {/* Links */}
-                {/* <div className="flex gap-3">
+                {(project.github || project.demo) && (<div className="flex gap-3">
                   {project.github && (
                     <a
                       href={project.github}
@@ -126,7 +136,7 @@ export default function Projects({ projects }: ProjectsProps) {
                       Demo
                     </a>
                   )}
-                </div> */}
+                </div>)}
               </div>
             </div>
             </Reveal>

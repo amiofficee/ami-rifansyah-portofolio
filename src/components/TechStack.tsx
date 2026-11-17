@@ -20,14 +20,28 @@ export default function TechStack({ techStack }: TechStackProps) {
           </div>
         </Reveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {techStack.map((category, index) => (
-            <Reveal key={index} delayMs={index * 100}>
-              <div className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-6 items-stretch">
+          {techStack.map((category, index) => {
+            const wide = index >= 3;
+            const isLastOdd =
+              index === techStack.length - 1 && techStack.length % 2 === 1;
+            return (
+            <Reveal
+              key={index}
+              delayMs={index * 100}
+              className={`h-full ${wide ? 'lg:col-span-3' : 'lg:col-span-2'} ${
+                isLastOdd ? 'md:col-span-2' : ''
+              }`}
+            >
+              <div className="h-full bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 text-center">
                   {category.category}
                 </h3>
-                <div className="space-y-3 reveal-stagger">
+                <div
+                  className={`grid gap-3 reveal-stagger ${
+                    wide ? 'sm:grid-cols-2' : 'grid-cols-1'
+                  } ${isLastOdd ? 'md:grid-cols-2' : ''}`}
+                >
                   {category.technologies.map((tech, techIndex) => (
                     <div
                       key={techIndex}
@@ -44,7 +58,8 @@ export default function TechStack({ techStack }: TechStackProps) {
                 </div>
               </div>
             </Reveal>
-          ))}
+            );
+          })}
         </div>
 
         {/* Additional Info */}

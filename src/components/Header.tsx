@@ -26,7 +26,7 @@ export default function Header() {
                   alt="Logo"
                   width={40}
                   height={40}
-                  className="object-cover"
+                  className="h-full w-full object-cover"
                 />
               </div>
               <span className="text-xl font-bold text-gray-900 dark:text-gray-100">Ami Rifansyah</span>
